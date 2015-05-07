@@ -23,7 +23,6 @@
       }
     </style>
     <link href="style.css" rel="stylesheet" />
-    <link href="signup.css" rel="stylesheet" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,36 +34,22 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
     <!-- Javascript
     ================================================== -->
+    <script>
+    var part = <?php echo "\"" . $_POST['bodyparts'] . "\""; ?>;
+    </script>
   </head>
 
    <body>
 
     <main class="container">
 
-
-      <h1>Medi-Cal Operation</h1>
-
-      <form class="form-signin"  action="http://go.seiu-uhw.org/l/45502/2015-05-06/8d57w" method="post">
-        <label for="inputFname" class="sr-only">First Name</label>
-        <input name="fname" type="text" id="inputFname" class="form-control" placeholder="First Name" required autofocus>
-        <label for="inputLname" class="sr-only">Last Name</label>
-        <input name="lname" type="text" id="inputLname" class="form-control" placeholder="Last Name" required autofocus>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-          <p>Which body part did you select?</p>
-          <select id="bodyparts" name="bodyparts">
-            <option value="adamsApple">Adam's Apple</option>
-            <option value="borkenHeart">Broken Heart</option>
-          </select>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Share</button>
-      </form>
-
+        <p>Congrats!</p>
 
     </main> <!-- /container -->
 
     <script data-require="jquery" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script data-require="bootstrap" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+    <script src="script.js"></script>
   </body>
 
 </html>
