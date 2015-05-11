@@ -11,16 +11,27 @@
       <link data-require="bootstrap-css" data-semver="3.3.1" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
     <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
     <style>
-      body {
-        padding-top: 60px;
-      }
-      @media (max-width: 979px) {
+        body {
+            padding-top: 60px;
+        }
+
+        .share {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #facebook { background: url(share-icons.png) 0 0; }
+        #twitter { background: url(share-icons.png) 207px 0; }
+        #email { background: url(share-icons.png) 104px 0; }
+
+        @media (max-width: 979px) {
 
         /* Remove any padding from the body */
         body {
-          padding-top: 0;
+             padding-top: 0;
         }
-      }
+        }
     </style>
     <link href="style.css" rel="stylesheet" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -43,9 +54,9 @@
 
     <main class="app-container">
 
-        <div id="facebook"></div>
-        <div id="twitter"></div>
-        <div id="email"></div>
+        <div id="facebook" class="share"></div>
+        <div id="twitter" class="share"></div>
+        <div id="email" class="share"></div>
 
     </main> <!-- /container -->
 
