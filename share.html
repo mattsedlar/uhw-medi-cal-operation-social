@@ -18,8 +18,11 @@
         .share {
             width: 100px;
             height: 100px;
+            margin-right: 12px;
             display: inline-block;
         }
+
+        .share:last-child { margin-right: 0px; }
 
         #facebook { background: url(share-icons.png) 0 0; }
         #twitter { background: url(share-icons.png) 207px 0; }
@@ -47,16 +50,33 @@
     ================================================== -->
     <script>
     var part = <?php echo "\"" . $_POST['bodyparts'] . "\""; ?>;
+
+	  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '869805636410623',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
     </script>
   </head>
 
    <body>
 
     <main class="app-container">
-
-        <div id="facebook" class="share"></div>
-        <div id="twitter" class="share"></div>
-        <div id="email" class="share"></div>
+        <ul>
+        <li id="facebook" class="share"></li>
+        <li id="twitter" class="share"></li>
+        <li id="email" class="share"></li>
+        </ul>
 
     </main> <!-- /container -->
 
