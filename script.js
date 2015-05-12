@@ -30,7 +30,7 @@ var parts = {
     twitter: marks[0].twitter + ": having a stroke, you shouldn’t need to worry if Medi-Cal will cover your treatment. [link to pic]  #MediCalMatters #CADem15",
     facebook: "After Luz was rushed to the Emergency Room with a stroke, she discovered that her Medi-Cal insurance wouldn’t cover the surgery. Read Luz’s story, and take action to fully fund Medi-Cal for California.",
     image: "",
-    email: "When Luz Arellano was rushed to a San Diego Emergency Room with a stroke, that was only the start of her problems.\n\nWhile she was in recovery, Luz discovered that her Medi-Cal insurance wouldn’t cover the cost of her emergency surgery.\n\nOn top of that, she began having complications from the surgery, including vision problems. Luz was able to get a referral to a specialist, but is facing a 5 month wait to be seen.\n\nMedi-Cal patients like Luz face real problems finding specialists who can afford to accept Medi-Cal coverage and provide care in a timely manner. Low Medi-Cal reimbursement rates mean fewer doctors who can afford to take Medi-Cal, and that means longer wait times and health complications for people like Luz.\n\nPlease support fully funding Medi-Cal, and help Luz and others like her to get the care they need.\n\nSincerely,\n\n"
+    email: "When Luz Arellano was rushed to a San Diego Emergency Room with a stroke, that was only the start of her problems.\r\n\r\nWhile she was in recovery, Luz discovered that her Medi-Cal insurance wouldn\'t cover the cost of her emergency surgery.\r\n\r\nOn top of that, she began having complications from the surgery, including vision problems. Luz was able to get a referral to a specialist, but is facing a 5 month wait to be seen.\r\n\r\nMedi-Cal patients like Luz face real problems finding specialists who can afford to accept Medi-Cal coverage and provide care in a timely manner. Low Medi-Cal reimbursement rates mean fewer doctors who can afford to take Medi-Cal, and that means longer wait times and health complications for people like Luz.\r\n\r\nPlease support fully funding Medi-Cal, and help Luz and others like her to get the care they need.\r\n\r\nSincerely,\r\n\r\n"
   },
 
   heart: {
@@ -143,7 +143,7 @@ $("#twitter").click( function() {
   });
 
   $("#email").click( function() {
-    $.post( "email.php", $( "#emailForm" ).serialize() );
+    $( "#emailForm" ).submit();
   });
 
 });

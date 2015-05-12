@@ -15,19 +15,6 @@
             padding-top: 60px;
         }
 
-        .share {
-            width: 100px;
-            height: 100px;
-            margin-right: 12px;
-            display: inline-block;
-        }
-
-        .share:last-child { margin-right: 0px; }
-
-        #facebook { background: url(share-icons.png) 0 0; }
-        #twitter { background: url(share-icons.png) 207px 0; }
-        #email { background: url(share-icons.png) 104px 0; }
-
         @media (max-width: 979px) {
 
         /* Remove any padding from the body */
@@ -37,7 +24,6 @@
         }
     </style>
     <link href="style.css" rel="stylesheet" />
-    <link href="signup.css" rel="stylesheet" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -49,51 +35,27 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
     <!-- Javascript
     ================================================== -->
-    <script>
-    var part = <?php echo "\"" . $_POST['bodyparts'] . "\""; ?>;
-
-	  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '869805636410623',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-    </script>
   </head>
 
    <body>
 
-       <div id="fb-root"></div>
 
     <main class="app-container">
-        <ul>
-        <li id="facebook" class="share"></li>
-        <li id="twitter" class="share"></li>
-        <li id="email" class="share"></li>
-        </ul>
-
-        <form id="emailForm" action="email.php" method="post" target="_blank">
-            <input name="legislator" id="legislator" type="hidden"></input>
-            <textarea id="my-text" name="text" style="display:none"></textarea>
-            <input name="sender" id="sender" type="hidden" value="<?php echo $_POST['fname'] . " " . $_POST['lname']; ?>"></input>
-            <input name="email" id="email" type="hidden" value=""></input>
-        </form>
-
-
+    <?php
+      echo "<h2>Your email has been sent</h2>";
+      $ToEmail = $_POST['email'];
+      $EmailSubject = 'Test';
+      $mailheader = "From: ".$_POST["email"]."\r\n\r\n";
+      $MESSAGE_BODY = "Dear ".$_POST["legislator"].",\r\n\r\n";
+      $MESSAGE_BODY .= $_POST["text"];
+      $MESSAGE_BODY .= $_POST["sender"];
+      mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure");
+    ?>
     </main> <!-- /container -->
 
     <script data-require="jquery" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script data-require="bootstrap" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
   </body>
 
 </html>
+
