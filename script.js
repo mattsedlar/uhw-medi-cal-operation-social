@@ -1,23 +1,16 @@
 var marks = [
 
   {
-    name: "Jerry Brown",
-    title: "Governor",
-    email: "",
-    twitter: "@JerryBrownGov"
-  },
-
-  {
     name: "Kevin de León",
     title: "California Senate President pro Tempore",
-    email: "",
+    email: "senator.deleon@senate.ca.gov",
     twitter: "@kdeleon"
   },
 
   {
     name: "Toni Atkins",
     title: "California Speaker of the Assembly",
-    email: "",
+    email: "assemblymember.atkins@asm.ca.gov",
     twitter: "@toniatkins"
   }
 
