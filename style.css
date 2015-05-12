@@ -110,3 +110,10 @@ select {
   margin-bottom: 10px;
 }
 
+#emailForm {
+  display: none;
+}
+
+#my-text-edit {
+ text-align: left;
+}

@@ -23,7 +23,7 @@ var parts = {
     twitter: marks[0].twitter + ": having a stroke, you shouldn’t need to worry if Medi-Cal will cover your treatment. [link to pic]  #MediCalMatters #CADem15",
     facebook: "After Luz was rushed to the Emergency Room with a stroke, she discovered that her Medi-Cal insurance wouldn’t cover the surgery. Read Luz’s story, and take action to fully fund Medi-Cal for California.",
     image: "",
-    email: "When Luz Arellano was rushed to a San Diego Emergency Room with a stroke, that was only the start of her problems.\r\n\r\nWhile she was in recovery, Luz discovered that her Medi-Cal insurance wouldn\'t cover the cost of her emergency surgery.\r\n\r\nOn top of that, she began having complications from the surgery, including vision problems. Luz was able to get a referral to a specialist, but is facing a 5 month wait to be seen.\r\n\r\nMedi-Cal patients like Luz face real problems finding specialists who can afford to accept Medi-Cal coverage and provide care in a timely manner. Low Medi-Cal reimbursement rates mean fewer doctors who can afford to take Medi-Cal, and that means longer wait times and health complications for people like Luz.\r\n\r\nPlease support fully funding Medi-Cal, and help Luz and others like her to get the care they need.\r\n\r\nSincerely,\r\n\r\n"
+    email: "When Luz Arellano was rushed to a San Diego Emergency Room with a stroke, that was only the start of her problems.<br/><br/>While she was in recovery, Luz discovered that her Medi-Cal insurance wouldn\'t cover the cost of her emergency surgery.<br/><br/>On top of that, she began having complications from the surgery, including vision problems. Luz was able to get a referral to a specialist, but is facing a 5 month wait to be seen.<br/><br/>Medi-Cal patients like Luz face real problems finding specialists who can afford to accept Medi-Cal coverage and provide care in a timely manner. Low Medi-Cal reimbursement rates mean fewer doctors who can afford to take Medi-Cal, and that means longer wait times and health complications for people like Luz.<br/><br/>Please support fully funding Medi-Cal, and help Luz and others like her to get the care they need.<br/><br/>Sincerely,<br/><br/>"
   },
 
   heart: {
@@ -99,12 +99,15 @@ function shuffleArray(array) {
     return array;
 }
 
-$(document).ready( function() {
-
 shuffleArray(marks);
 
+$("#share-title").append(marks[0].title + " " + marks[0].name);
+
+
+$(document).ready( function() {
+
 $("#legislator").val(marks[0].title + " " + marks[0].name);
-$("#my-text").html(parts[part].email);
+$("#my-text-edit").html(parts[part].email);
 
 $("#facebook").click( function() {
       FB.ui({
@@ -136,7 +139,10 @@ $("#twitter").click( function() {
   });
 
   $("#email").click( function() {
-    $( "#emailForm" ).submit();
+    var editText = document.getElementById("my-text-edit").innerHTML,
+        emailText = editText.replace(/<br><br>/g,"\r\n\r\n");
+    document.getElementById("my-text").value = emailText;
+    $( "#emailForm" ).css("display","block");
   });
 
 });

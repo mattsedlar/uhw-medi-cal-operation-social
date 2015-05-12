@@ -3,10 +3,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>Share a Medi-Cal Story</title>
+    <title>Medi-Cal Operation - Share a Story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="author" content="SEIU-UHW" />
     <!-- Styles -->
       <link data-require="bootstrap-css" data-semver="3.3.1" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
     <link data-require="bootstrap@*" data-semver="3.3.2" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
@@ -14,22 +13,20 @@
         body {
             padding-top: 60px;
         }
-
         .share {
             width: 100px;
             height: 100px;
             margin-right: 12px;
             display: inline-block;
+            box-shadow: 3px 3px 5px #888;
+            -webkit-box-shadow: 3px 3px 5px #888;
+            -moz-box-shadow: 3px 3px 5px #888;
         }
-
         .share:last-child { margin-right: 0px; }
-
         #facebook { background: url(share-icons.png) 0 0; }
         #twitter { background: url(share-icons.png) 207px 0; }
         #email { background: url(share-icons.png) 104px 0; }
-
         @media (max-width: 979px) {
-
         /* Remove any padding from the body */
         body {
              padding-top: 0;
@@ -52,13 +49,13 @@
     <script>
     var part = <?php echo "\"" . $_POST['bodyparts'] . "\""; ?>;
 
-	  window.fbAsyncInit = function() {
+    window.fbAsyncInit = function() {
     FB.init({
       appId      : '869805636410623',
       xfbml      : true,
       version    : 'v2.3'
     });
-  };
+    };
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -72,20 +69,24 @@
 
    <body>
 
-       <div id="fb-root"></div>
+    <div id="fb-root"></div>
 
     <main class="app-container">
+        <h1 id="share-title">Share the story with </h1><br/>
         <ul>
         <li id="facebook" class="share"></li>
         <li id="twitter" class="share"></li>
         <li id="email" class="share"></li>
         </ul>
 
-        <form id="emailForm" action="email.php" method="post" target="_blank">
-            <input name="legislator" id="legislator" type="hidden"></input>
-            <textarea id="my-text" name="text" style="display:none"></textarea>
-            <input name="sender" id="sender" type="hidden" value="<?php echo $_POST['fname'] . " " . $_POST['lname']; ?>"></input>
-            <input name="email" id="email" type="hidden" value=""></input>
+        <form id="emailForm" action="email.php" method="post" target="_blank" class="form-signin">
+            <h2>Email Text</h2>
+            <input name="legislator" id="legislator" type="hidden" class="form-control"></input>
+            <div id="my-text-edit" contenteditable="true" class="form-control"></div>
+            <textarea id="my-text" name="text" class="form-control" style="display:none;"></textarea>
+            <input name="sender" id="sender" type="text" class="form-control" value="<?php echo $_POST['fname'] . " " . $_POST['lname']; ?>"></input>
+            <input name="email" id="email" type="hidden" value="<?php echo $_POST['email']; ?>"></input>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Send Email</button>
         </form>
 
 
