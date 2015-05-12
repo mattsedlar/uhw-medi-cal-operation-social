@@ -80,6 +80,14 @@
         <li id="email" class="share"></li>
         </ul>
 
+        <form id="emailForm" action="email.php" method="post">
+            <input name="legislator" id="legislator" type="hidden"></input>
+            <div id="my-text" name="text" contenteditable="true" style="display:none"></div>
+            <input name="sender" id="sender" type="hidden"><?php echo $_POST['fname'] . " " . $_POST['lname']; ?></input>
+            <input name="email" id="email" type="hidden"><?php echo $_POST['email']; ?></input>
+        </form>
+
+
     </main> <!-- /container -->
 
     <script data-require="jquery" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>

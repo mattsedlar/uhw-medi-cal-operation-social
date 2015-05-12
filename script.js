@@ -30,7 +30,7 @@ var parts = {
     twitter: marks[0].twitter + ": having a stroke, you shouldn’t need to worry if Medi-Cal will cover your treatment. [link to pic]  #MediCalMatters #CADem15",
     facebook: "After Luz was rushed to the Emergency Room with a stroke, she discovered that her Medi-Cal insurance wouldn’t cover the surgery. Read Luz’s story, and take action to fully fund Medi-Cal for California.",
     image: "",
-    email: ""
+    email: "When Luz Arellano was rushed to a San Diego Emergency Room with a stroke, that was only the start of her problems.\n\nWhile she was in recovery, Luz discovered that her Medi-Cal insurance wouldn’t cover the cost of her emergency surgery.\n\nOn top of that, she began having complications from the surgery, including vision problems. Luz was able to get a referral to a specialist, but is facing a 5 month wait to be seen.\n\nMedi-Cal patients like Luz face real problems finding specialists who can afford to accept Medi-Cal coverage and provide care in a timely manner. Low Medi-Cal reimbursement rates mean fewer doctors who can afford to take Medi-Cal, and that means longer wait times and health complications for people like Luz.\n\nPlease support fully funding Medi-Cal, and help Luz and others like her to get the care they need.\n\nSincerely,\n\n"
   },
 
   heart: {
@@ -73,9 +73,21 @@ var parts = {
     email: ""
   },
 
-  leftArm: {},
+  leftArm: {
+    name: "Jenevy Guzman, 9, Fresno",
+    twitter: "9-yo Jenevy went months w/o care for a dangerous allergy, b/c she’s covered by Medi-Cal. [link to pic] " + marks[0].twitter + " #MediCalMatters #CADem15",
+    facebook: "It took 9-year-old Jenevy over three months to be able to see a specialist who diagnosed her with a life-threatening allergy. Read her story, and take action to fully fund Medi-Cal for California.",
+    image: "",
+    email: ""
+  },
 
-  rightArm: {}
+  rightArm: {
+    name: "Gilberto Uribe, 57, Oakland, Mariachi",
+    twitter: "How can musician Gilberto work when he has to wait months for an arthritis appointment? [link to pic] #MediCalMatters " + marks[0].twitter + " #CADem15",
+    facebook: "As a musician, Gilberto needs his hands in order to work, but because he has Medi-Cal coverage, he has to wait months for an appointment to get his arthritis medicine. Read his story and take action to fully fund Medi-Cal for California.",
+    image: "",
+    email: ""
+  }
 
 };
 
@@ -98,6 +110,9 @@ $(document).ready( function() {
 
 shuffleArray(marks);
 
+$("#legislator").val(marks[0].title + " " + marks[0].name);
+$("#my-text").html(parts[part].email);
+
 $("#facebook").click( function() {
       FB.ui({
           method: 'feed',
@@ -108,24 +123,27 @@ $("#facebook").click( function() {
 });
 
 $("#twitter").click( function() {
-  var twitterUrl = "http://twitter.com/share/?",
-  text = "text=" + parts[part].twitter,
-  picUrl = "&url=" + parts[part].image;
+    var twitterUrl = "http://twitter.com/share/?",
+    text = "text=" + parts[part].twitter,
+    picUrl = "&url=" + parts[part].image;
 
-  var width  = 575,
-  height = 400,
-  left   = ($(window).width()  - width)  / 2,
-  top    = ($(window).height() - height) / 2,
-  url    = twitterUrl + text + picUrl,
-  opts   = 'status=1' +
-           ',width='  + width  +
-           ',height=' + height +
-           ',top='    + top    +
-           ',left='   + left;
+    var width  = 575,
+    height = 400,
+    left   = ($(window).width()  - width)  / 2,
+    top    = ($(window).height() - height) / 2,
+    url    = twitterUrl + text + picUrl,
+    opts   = 'status=1' +
+             ',width='  + width  +
+             ',height=' + height +
+             ',top='    + top    +
+             ',left='   + left;
 
-  window.open(url, 'twitter', opts);
+    window.open(url, 'twitter', opts);
 
-});
+  });
 
+  $("#email").click( function() {
+    $.post( "email.php", $( "#emailForm" ).serialize() );
+  });
 
 });
