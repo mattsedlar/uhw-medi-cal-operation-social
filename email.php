@@ -45,6 +45,7 @@
       $ToEmail = $_POST['email'];
       $EmailSubject = 'Test';
       $mailheader = "From: Medi-Cal Matters <no-reply@s15442843.onlinehome-server.com>\r\n";
+      $mailheader .= "Reply-To: ".$_POST['email']."\r\n";
       $mailheader .= "CC:".$_POST["email"]."\r\n\r\n";
       $MESSAGE_BODY = "Dear ".$_POST["legislator"].",\r\n\r\n";
       $MESSAGE_BODY .= $_POST["text"];
