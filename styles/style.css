@@ -117,3 +117,9 @@ select {
 #my-text-edit {
  text-align: left;
 }
+
+@media (min-width: 768px) {
+ .form-signin {
+  min-width: 500px;
+ }
+}
