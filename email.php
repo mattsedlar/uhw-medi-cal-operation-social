@@ -47,7 +47,8 @@
       $mailheader = "From: Medi-Cal Matters <no-reply@s15442843.onlinehome-server.com>\r\n";
       $mailheader .= "Reply-To: ".$_POST['email']."\r\n";
       $mailheader .= "CC:".$_POST["email"]."\r\n\r\n";
-      $MESSAGE_BODY = "Dear ".$_POST["legislator"].",\r\n\r\n";
+      $mailheader .= "Bcc: eperez@seiu-uhw.org" . "\r\n\r\n";
+      $MESSAGE_BODY = "Dear Speaker Atkins and President Pro Tempore de Leon,\r\n\r\n";
       $MESSAGE_BODY .= $_POST["text"];
       $MESSAGE_BODY .= $_POST["sender"];
       mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure");
