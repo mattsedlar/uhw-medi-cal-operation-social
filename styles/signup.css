@@ -7,6 +7,9 @@
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
+.form-signin p {
+  padding: 6px 0px;
+}
 .form-signin .checkbox {
   font-weight: normal;
 }
