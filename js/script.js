@@ -112,10 +112,10 @@ $("#my-text-edit").html(parts[part].email);
 $("#facebook").click( function() {
       FB.ui({
           method: 'feed',
-          link: 'http://mattsedlar.net/development/social-media-app/share.php',
+          link: 'http://www.medi-calmatters.org/splash',
           name: parts[part].name,
           picture: "http://mattsedlar.net/development/social-media-app/" + parts[part].image,
-          caption: parts[part].facebook
+          description: parts[part].facebook
           }, function(response){});
 });
 

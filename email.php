@@ -44,7 +44,7 @@
       echo "<h2>Your email has been sent</h2>";
       $ToEmail = $_POST['email'];
       $EmailSubject = 'Test';
-      $mailheader = "From: ".$_POST["email"]."\r\n\r\n";
+      $mailheader = "From: ".$_POST["email"]."\r\n". "CC:".$_POST["email"]."\r\n\r\n";
       $MESSAGE_BODY = "Dear ".$_POST["legislator"].",\r\n\r\n";
       $MESSAGE_BODY .= $_POST["text"];
       $MESSAGE_BODY .= $_POST["sender"];
