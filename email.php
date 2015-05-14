@@ -43,10 +43,9 @@
     <?php
       echo "<h2>Your email has been sent</h2>";
       $ToEmail = $_POST['email'];
-      $EmailSubject = 'Test';
+      $EmailSubject = $_POST['person'] . '\'s story shows why Medi-Cal Matters';
       $mailheader = "From: Medi-Cal Matters <no-reply@s15442843.onlinehome-server.com>\r\n";
       $mailheader .= "Reply-To: ".$_POST['email']."\r\n";
-      $mailheader .= "CC:".$_POST["email"]."\r\n\r\n";
       $mailheader .= "Bcc: eperez@seiu-uhw.org" . "\r\n\r\n";
       $MESSAGE_BODY = "Dear Speaker Atkins and President Pro Tempore de Leon,\r\n\r\n";
       $MESSAGE_BODY .= $_POST["text"];

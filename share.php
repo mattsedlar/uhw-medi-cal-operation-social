@@ -16,7 +16,7 @@
         .share {
             width: 100px;
             height: 100px;
-            margin-right: 12px;
+            margin: 12px 12px 12px 0;
             display: inline-block;
             box-shadow: 3px 3px 5px #888;
             -webkit-box-shadow: 3px 3px 5px #888;
@@ -83,7 +83,7 @@
 
         <section id="body-parts-selection">
             <div id="parts-selector-form" class="form-signin">
-                <p>Which body part did you select?</p>
+                <h2>Which body part did you select?</h2>
                 <select id="bodyparts" name="bodyparts">
                     <option value="brain">Brain</option>
                     <option value="heart">Heart</option>
@@ -92,14 +92,14 @@
                     <option value="lungs">Lungs</option>
                     <option value="foot">Foot</option>
                     <option value="leftArm">Left Arm</option>
-                    <option value="rightArm">Right Arm</option>
+                    <option value="rightHand">Right Hand</option>
                 </select>
                 <a class="btn btn-lg btn-primary btn-block" id="next">Next</a>
             </div>
         </section>
 
         <section id="social-buttons">
-            <h1 id="share-title">Share the story with decisionmakers</h1><br/>
+            <h2 id="share-title">Share the story with decisionmakers</h2><br/>
             <ul>
             <li id="facebook" class="share"></li>
             <li id="twitter" class="share"></li>
@@ -109,6 +109,7 @@
 
         <form id="emailForm" action="email.php" method="post" target="_blank" class="form-signin">
             <h2>Email Text</h2>
+	    <p>Dear Speaker Atkins and President Pro Tempore de Leon,</p>
             <div id="my-text-edit" contenteditable="true" class="form-control"></div>
             <textarea id="my-text" name="text" class="form-control" style="display:none;"></textarea>
             <input name="sender" id="sender" type="text" class="form-control" value="<?php
@@ -117,6 +118,7 @@
               } else { echo ""; }
              ?>" placeholder="Full Name"></input>
             <input name="email" id="email" type="email" class="form-control" value="<?php echo $_POST['email'];?>" placeholder="Email"></input>
+            <input name="person" id="person" type="hidden"></input>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Send Email</button>
         </form>
 
