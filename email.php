@@ -42,7 +42,8 @@
     <main class="app-container">
     <?php
       echo "<h2>Your email has been sent</h2>";
-      $ToEmail = $_POST['email'];
+      $ToEmail = "senator.deleon@senate.ca.gov,";
+      $ToEmail .= "assemblymember.atkins@asm.ca.gov";
       $EmailSubject = $_POST['person'] . '\'s story shows why Medi-Cal Matters';
       $mailheader = "From: Medi-Cal Matters <no-reply@s15442843.onlinehome-server.com>\r\n";
       $mailheader .= "Reply-To: ".$_POST['email']."\r\n";

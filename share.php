@@ -117,7 +117,7 @@
               echo $_POST['fname'] . " " . $_POST['lname'];
               } else { echo ""; }
              ?>" placeholder="Full Name"></input>
-            <input name="email" id="email" type="email" class="form-control" value="<?php echo $_POST['email'];?>" placeholder="Email"></input>
+            <input name="email" id="email" type="email" class="form-control" value="<?php echo $_POST['email'];?>" placeholder="Email" required></input>
             <input name="person" id="person" type="hidden"></input>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Send Email</button>
         </form>
