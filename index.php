@@ -55,11 +55,13 @@
         <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputZip" class="sr-only">Zip Code</label>
         <input name="zip" type="number" maxlength="5" id="inputZip" class="form-control" placeholder="Zip Code" required autofocus>
+        <label for="inputMember">Are you a member of SEIU-UHW?</label>
+        <input name="member" type="checkbox" id="inputMember" value="MEMBER"></input>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Next</button>
       </form>
 
-
     </main> <!-- /container -->
+
 
     <script data-require="jquery" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script data-require="bootstrap" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

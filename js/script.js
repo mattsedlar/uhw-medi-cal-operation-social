@@ -93,9 +93,18 @@ $(document).ready( function() {
 
     part = $("#bodyparts").val();
     $("#body-parts-selection").hide();
-    $("#social-buttons").css("display","block").fadeIn();
 
+    // Filling in the div with email text
     $("#my-text-edit").html(parts[part].email);
+
+    $("#social-buttons").css("display","block");
+    $( "#emailForm" ).css("display","block");
+
+    // Adding the Medi-Cal patient to the subject line
+    var emailSubject = parts[part].name.split(",");
+    emailSubject = emailSubject[0];
+    $( "#person" ).val(emailSubject);
+
 
     $("#facebook").click( function() {
           FB.ui({
@@ -128,20 +137,21 @@ $(document).ready( function() {
 
       });
 
-      $("#emailShare").click( function() {
-        $( "#emailForm" ).css("display","block");
-        var emailSubject = parts[part].name.split(",");
-        emailSubject = emailSubject[0];
-        $( "#person" ).val(emailSubject);
-      });
 
       $("#emailForm").submit( function() {
         $("#emailForm").css("display","none");
         var editText = document.getElementById("my-text-edit").innerHTML,
         emailText = editText.replace(/<br><br>/g,"\r\n\r\n");
         document.getElementById("my-text").value = emailText;
-        window.open('','formpopup','width=400,height=200,resizeable,scrollbars');
-        this.target = 'formpopup';
+
+        var startOver = $("<a />", {
+          href : "http://seiuuhw.org/medi-cal-operation/",
+          text : "Start the game again",
+          class : "btn btn-lg btn-primary btn-block form-signin"
+        });
+
+        $("main").append("<p>Your email has been sent</p>").append(startOver);
+
       });
 
 

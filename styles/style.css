@@ -139,8 +139,18 @@ select {
   margin-bottom: 10px;
 }
 
+label {
+  font-size: 1.6em;
+  padding: 12px;
+}
+
 #social-buttons, #emailForm {
   display: none;
+}
+
+#social-buttons {
+  text-align: left;
+  margin: 0 24px 0 24px;
 }
 
 #my-text-edit {

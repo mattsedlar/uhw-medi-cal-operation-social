@@ -99,17 +99,19 @@
         </section>
 
         <section id="social-buttons">
-            <h2 id="share-title">Share the story with decisionmakers</h2><br/>
-            <ul>
+            <h1 id="share-title">Share the story with decisionmakers</h1><br/>
+            <p>You took the first step to fully fund Medi-Cal! You will receive an email from “Medi-Cal Operation Game” called "You played the game, now take the next step” with ways to share this story on Facebook and Twitter to help spread the word that Medi-Cal matters.</p>
+            <p>Now take action by sending an email to Speaker of the Assembly Toni Atkins and Senate President Pro Tem Kevin deLeon.</p><br/>
+            <!-- ul>
             <li id="facebook" class="share"></li>
             <li id="twitter" class="share"></li>
             <li id="emailShare" class="share"></li>
-            </ul>
+            </ul -->
         </section>
 
-        <form id="emailForm" action="email.php" method="post" target="_blank" class="form-signin">
+        <form id="emailForm" action="email.php" method="post" class="form-signin" target="hidden-form">
             <h2>Email Text</h2>
-	    <p>Dear Speaker Atkins and President Pro Tempore de Leon,</p>
+	          <p>Dear Speaker Atkins and President Pro Tempore de Leon,</p>
             <div id="my-text-edit" contenteditable="true" class="form-control"></div>
             <textarea id="my-text" name="text" class="form-control" style="display:none;"></textarea>
             <input name="sender" id="sender" type="text" class="form-control" value="<?php
@@ -124,6 +126,8 @@
 
 
     </main> <!-- /container -->
+
+    <iframe style="display:none" name="hidden-form"></iframe>
 
     <script data-require="jquery" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script data-require="bootstrap" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
