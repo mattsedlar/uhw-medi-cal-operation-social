@@ -75,8 +75,8 @@
 
     <div id="fb-root"></div>
 
-	<header class="logo group">
-	    <figure><img src="http://go.seiu-uhw.org/l/45502/2014-12-02/2byct/45502/28054/SEIU_UHW_Logo_4C_noBG.png" alt="SEIU-UHW"/></figure>
+  <header class="logo group">
+	    <figure><img src="images/Medi-CalLogo.jpg" alt="Medi-Cal Matters"/></figure>
 	</header>
 
     <main class="app-container">

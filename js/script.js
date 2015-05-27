@@ -120,7 +120,7 @@ $(document).ready( function() {
         var twitterUrl = "http://twitter.com/intent/tweet?",
             text = "text=" + parts[part].twitter;
             //add shortened url for images
-            hashtags = "&hashtags=MediCalMatters,CADem15"
+            hashtags = "&hashtags=MediCalMatters"
 
         var width  = 575,
         height = 400,
