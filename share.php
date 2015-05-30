@@ -98,15 +98,23 @@
             </div>
         </section>
 
-        <section id="social-buttons">
+      <?php if(isset($_GET['social'])) { ?>
+
+      <div id="social-buttons">
+           <h1 id="share-title">Share the story with decisionmakers</h1><br/>
+
+            <ul>
+            <li id="facebook" class="share"></li>
+            <li id="twitter" class="share"></li>
+            </ul>
+      </div>
+
+      <?php } else { ?>
+
+        <section id="email-intro">
             <h1 id="share-title">Share the story with decisionmakers</h1><br/>
             <p>You took the first step to fully fund Medi-Cal! You will receive an email from “Medi-Cal Operation Game” called "You played the game, now take the next step” with ways to share this story on Facebook and Twitter to help spread the word that Medi-Cal matters.</p>
             <p>Now take action by sending an email to Speaker of the Assembly Toni Atkins and Senate President Pro Tem Kevin deLeon.</p><br/>
-            <!-- ul>
-            <li id="facebook" class="share"></li>
-            <li id="twitter" class="share"></li>
-            <li id="emailShare" class="share"></li>
-            </ul -->
         </section>
 
         <form id="emailForm" action="email.php" method="post" class="form-signin" target="hidden-form">
@@ -124,6 +132,7 @@
             <button class="btn btn-lg btn-primary btn-block" type="submit">Send Email</button>
         </form>
 
+        <?php } ?>
 
     </main> <!-- /container -->
 

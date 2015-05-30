@@ -97,8 +97,7 @@ $(document).ready( function() {
     // Filling in the div with email text
     $("#my-text-edit").html(parts[part].email);
 
-    $("#social-buttons").css("display","block");
-    $( "#emailForm" ).css("display","block");
+    $("#email-intro, #emailForm, #social-buttons").css("display","block");
 
     // Adding the Medi-Cal patient to the subject line
     var emailSubject = parts[part].name.split(",");

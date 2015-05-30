@@ -139,11 +139,11 @@ label {
   padding: 12px;
 }
 
-#social-buttons, #emailForm {
+#social-buttons, #email-intro, #emailForm {
   display: none;
 }
 
-#social-buttons {
+#email-intro {
   text-align: left;
   margin: 0 24px 0 24px;
 }
