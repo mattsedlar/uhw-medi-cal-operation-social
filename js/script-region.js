@@ -2,6 +2,7 @@ var marks = [
 
   {
     name: "Mark Leno",
+    title: "Senator",
     emailAddress: "senator.leno@senate.ca.gov",
     recipient: "Jose, age 54, Oakland, Handyman",
     twitter: "No one should have a scheduled surgery cancelled just because their insurance is Medi-Cal @markleno ",
@@ -13,6 +14,7 @@ var marks = [
 
   {
     name: "Ricardo Lara",
+    title: "Senator",
     emailAddress: "senator.lara@senate.ca.gov",
     recipient: "Lourdes, age 45, Compton",
     twitter: "After an accident, you shouldn't need to wait months for surgery b/c you have Medi-Cal @SenRicardoLara ",
@@ -23,14 +25,20 @@ var marks = [
   },
 
   {
-    name: "Speaker of the Assembly Toni Atkins",
-    email: "assemblymember.atkins@asm.ca.gov",
-    twitter: "@ToniAtkins",
+    name: "Toni Atkins",
+    title: "Speaker of the Assembly",
+    emailAddress: "assemblymember.atkins@asm.ca.gov",
+    recipient: "Emily Avila, Age 28, Cathedral City, Homecare Hospice RN",
+    twitter: "If you have epilepsy like Emily, you can't afford to wait months for treatment. @ToniAtkins ",
+    facebook: "When Emily had a seizure, she had to wait months to be able to see a neurologist who could adjust her epilepsy medication. Join the campaign and take action to fully fund Medi-Cal for California.",
+    image: "",
+    email: "Emily has struggled with epilepsy her whole life, but trying to get the care she needed has been the hardest fight yet.<br><br>When Emily had a seizure that caused a car accident, she was forced to stop working for five months. Emily couldn't keep her private health coverage and enrolled in Medi-Cal.<br><br>When she went to make and appointment, Emily found out that her regular neurologist couldn't afford to take new Medi-Cal patients. Emily had two more seizures while waiting for a referral to a neurologist who could fix her medication dosage.<br><br>Low Medi-Cal payment rates to doctors mean many specialists can't afford to treat new Medi-Cal patients. That means longer wait times and added health complications for patients like Emily, who need specialist care.<br><br>Please support fully funding Medi-Cal to help people like Emily get the care they need.<br><br>Sincerely,<br><br>",
     region: "Inland Empire"
   },
 
   {
-    name: "Senate President Pro Tem Kevin deLeon",
+    name: "Kevin deLeon",
+    title: "Senate President Pro Tem",
     email: "senator.deleon@senate.ca.gov",
     recipient: "Tioy, age 19, City of Ione",
     twitter: "When Medi-Cal patients like Tioy have to wait for care, it means higher costs %26 worse health. @kdeleon ",
@@ -42,6 +50,7 @@ var marks = [
 
   {
     name: "Shirley Weber",
+    title: "Assemblymember",
     emailAddress: "assemblymember.weber@assembly.ca.gov",
     recipient: "Luz, age 65, San Diego",
     twitter: ".@DrShirleyWeber: having a stroke, you shouldn't need to worry if Medi-Cal will cover your treatment. ",
@@ -53,6 +62,7 @@ var marks = [
 
 ];
 
+var targetNo;
 
 $(document).ready( function() {
 
@@ -60,34 +70,36 @@ $(document).ready( function() {
     for(x in marks) { if(marks.hasOwnProperty(x)) { if (marks[x].name == target) { return x; } } }
   }
 
-  var targetNo = findMark();
+  targetNo = findMark();
 
-  $("#email-target").append(target);
+  $("#email-target").append(marks[targetNo].title + " " + target + ",");
 
   // Filling in the div with email text
   $("#my-text-edit").html(marks[targetNo].email);
 
-  $("#social-buttons").css("display","block");
+  $("#email-intro").css("display","block");
   $( "#emailForm" ).css("display","block");
 
   // Adding the Medi-Cal patient to the subject line
   var emailSubject = marks[targetNo].recipient.split(",");
   emailSubject = emailSubject[0];
   $( "#person" ).val(emailSubject);
+  $( "#legislator" ).val(marks[targetNo].title + " " + target);
+  $( "#legislatorEmail" ).val(marks[targetNo].emailAddress);
 
     $("#facebook").click( function() {
           FB.ui({
               method: 'feed',
               link: 'http://www.medi-calmatters.org/splash',
-              name: parts[part].name,
-              picture: "http://seiuuhw.org/medi-cal-operation/" + parts[part].image,
-              description: parts[part].facebook
+              name: marks[targetNo].recipient,
+              picture: "http://seiuuhw.org/medi-cal-operation/" + marks[targetNo].image,
+              description: marks[targetNo].facebook
               }, function(response){});
     });
 
     $("#twitter").click( function() {
         var twitterUrl = "http://twitter.com/intent/tweet?",
-            text = "text=" + parts[part].twitter;
+            text = "text=" + marks[targetNo].twitter;
             //add shortened url for images
             hashtags = "&hashtags=MediCalMatters"
 
@@ -108,22 +120,18 @@ $(document).ready( function() {
 
 
       $("#emailForm").submit( function() {
+
         $("#emailForm").css("display","none");
+
         var editText = document.getElementById("my-text-edit").innerHTML,
         emailText = editText.replace(/<br><br>/g,"\r\n\r\n");
         document.getElementById("my-text").value = emailText;
 
-        var startOver = $("<a />", {
-          href : "http://seiuuhw.org/medi-cal-operation/",
-          text : "Start the game again",
-          class : "btn btn-lg btn-primary btn-block form-signin"
-        });
+        $("#email-intro, #emailForm").hide();
+        $("#social-buttons").toggle();
 
-        $("main").append("<p>Your email has been sent</p>").append(startOver);
 
       });
 
 
   });
-
-});

@@ -148,6 +148,8 @@ label {
   margin: 0 24px 0 24px;
 }
 
+#share-title { text-align: center; }
+
 #my-text-edit {
  text-align: left;
 }
