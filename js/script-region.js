@@ -13,6 +13,18 @@ var marks = [
   },
 
   {
+    name: "Richard Bloom",
+    title: "Assemblymember",
+    emailAddress: "richard.bloom@asm.ca.gov",
+    recipient: "Lourdes, age 45, Compton",
+    twitter: "After an accident, you shouldn't need to wait months for surgery b/c you have Medi-Cal @RichardBloom ",
+    facebook: "Since her car accident, Lourdes has been unable to get surgery for her torn knee ligament because she has Medi-Cal coverage. Join the campaign and take action to fully fund Medi-Cal.",
+    image: "images/lourdes.jpg",
+    email: "After a car accident, the last thing you should have to worry about is whether you will get the surgery you need. But Lourdes Ortiz from Compton found herself in just that situation.<br><br>Lourdes was rushed to the hospital, where they found she tore a ligament in her knee. That was more than six months ago – and Lourdes still hasn't been able to see a specialist to perform the surgery she needs to get her back on her feet. The wait hasn't just meant daily pain for Lourdes – it's meant losing her job too.<br><br>Medi-Cal's low payment rates to healthcare providers mean fewer doctors and hospitals are able to provide treatment to new Medi-Cal patients, and that means delays in care that can cause serious complications.<br><br>Please support fully funding Medi-Cal, and help people like Lourdes get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Los Angeles"
+  },
+
+  {
     name: "Ricardo Lara",
     title: "Senator",
     emailAddress: "senator.lara@senate.ca.gov",
@@ -31,7 +43,7 @@ var marks = [
     recipient: "Emily Avila, Age 28, Cathedral City, Homecare Hospice RN",
     twitter: "If you have epilepsy like Emily, you can't afford to wait months for treatment. @ToniAtkins ",
     facebook: "When Emily had a seizure, she had to wait months to be able to see a neurologist who could adjust her epilepsy medication. Join the campaign and take action to fully fund Medi-Cal for California.",
-    image: "",
+    image: "images/emily.jpg",
     email: "Emily has struggled with epilepsy her whole life, but trying to get the care she needed has been the hardest fight yet.<br><br>When Emily had a seizure that caused a car accident, she was forced to stop working for five months. Emily couldn't keep her private health coverage and enrolled in Medi-Cal.<br><br>When she tried to make an appointment, Emily found out that her regular neurologist couldn't afford to take new Medi-Cal patients. Emily had two more seizures while waiting for a referral to a neurologist who could fix her medication dosage.<br><br>Low Medi-Cal payment rates to doctors mean many specialists can't afford to treat new Medi-Cal patients. That means longer wait times and added health complications for patients like Emily, who need specialist care.<br><br>Please support fully funding Medi-Cal to help people like Emily get the care they need.<br><br>Sincerely,<br><br>",
     region: "Inland Empire"
   },
