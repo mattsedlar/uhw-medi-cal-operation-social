@@ -97,8 +97,8 @@
 
 
         <section id="email-intro">
-            <h1 id="share-title">Share the story with decisionmakers</h1><br/>
-            <p>Take action by sending an email to your local legislator.</p><br/>
+            <h1 id="share-title">Share the story with state legislators</h1><br/>
+            <p style="text-align: center">Take the next step by sharing a Medi-Cal story with a key legislator.</p><br/>
         </section>
 
         <form id="emailForm" action="email-region.php" method="post" class="form-signin" target="hidden-form">
@@ -116,8 +116,8 @@
 
 
       <section id="social-buttons">
-            <h1 id="share-title">Share the story with decisionmakers</h1><br/>
-            <p>Take action by contacting your local legislator on social media.</p><br/>
+            <h1 id="share-title">Share the story with state legislators</h1><br/>
+            <p>Take the next step by sharing a Medi-Cal story with a key legislator.</p><br/>
         <ul>
           <li id="facebook" class="share"></li>
           <li id="twitter" class="share"></li>
