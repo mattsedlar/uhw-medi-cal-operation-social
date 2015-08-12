@@ -72,6 +72,7 @@
   </head>
 
    <body>
+      <?php include_once("analytics.php") ?>
 
     <div id="fb-root"></div>
 

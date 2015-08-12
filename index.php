@@ -36,6 +36,7 @@
   </head>
 
    <body>
+      <?php include_once("analytics.php") ?>
 
   <header class="logo group">
 	    <figure><img src="images/Medi-CalLogo.jpg" alt="Medi-Cal Matters"/></figure>
