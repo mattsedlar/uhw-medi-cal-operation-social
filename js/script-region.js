@@ -1,53 +1,78 @@
 var marks = [
 
   {
-    name: "Juan Cervantes",
-    twitter: "Juan has suffered prostate pain - without treatment - since he was 8 because he's covered by Medi-Cal.",
-    facebook: "Juan Cervantes has suffered constant prostate pain since he was 8 years old. It's nearly impossible for him to find a specialist because he's insured by Medi-Cal. Californians like Juan shouldn't suffer with chronic disease because specialists can't afford to treat new Medi-Cal patients. Join the campaign and take action to fund Medi-Cal.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Juan-Cervantes-web.jpg",
-    link: "",
+    name: "Mark Leno",
+    title: "Senator",
+    emailAddress: "senator.leno@senate.ca.gov",
+    recipient: "Jose, age 54, Oakland, Handyman",
+    twitter: "No one should have a scheduled surgery cancelled just because their insurance is Medi-Cal @markleno ",
+    facebook: "Jose has been turned away from his scheduled hernia surgery twice because he's covered by Medi-Cal. Join the campaign and take action to fully fund Medi-Cal for California.",
+    image: "images/jose-b.jpg",
+    email: "Surgery is scary, but being turned away at the last minute for a surgery you need is even scarier.<br><br>Just ask Jose Berumen from Oakland, because he's been through it twice.<br><br>Jose is a handyman who had hernia surgery scheduled over a year ago – but when he switched from private insurance to Medi-Cal, his surgery and ongoing treatment were cancelled.<br><br>After months of searching, Jose found another provider who could take his Medi-Cal coverage, although he would have to wait two more months for his surgery. But when Jose showed up for that appointment, he learned that they did not accept new Medi-Cal patients after all.<br><br>When Medi-Cal doesn't fully fund healthcare providers, it's patients like Jose who suffer. Jose is still in pain, and still waiting to find a surgeon who is able to accept Medi-Cal.<br><br>Please support fully funding Medi-Cal, and help Jose and people like him get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Bay Area"
   },
 
   {
-    name: "Chanelle Fields",
-    twitter: "When kids like Ted get a 104 fever, they shouldn't go untreated just because they are covered by Medi-Cal.",
-    facebook: "When Chanelle Fields’ son Ted was running a 104-degree fever, she couldn’t get a doctor to see him because he is covered by Medi-Cal. Kids like Ted shouldn’t be put at risk because there are too few doctors who can afford to accept new Medi-Cal patients. Join the campaign and take action to fund Medi-Cal.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Chanelle-Fields-and-Ted-Smart-3.jpg",
-    link: "",
+    name: "Richard Bloom",
+    title: "Assemblymember",
+    emailAddress: "richard.bloom@asm.ca.gov",
+    recipient: "Lourdes, age 45, Compton",
+    twitter: "After an accident, you shouldn't need to wait months for surgery b/c you have Medi-Cal @RichardBloom ",
+    facebook: "Since her car accident, Lourdes has been unable to get surgery for her torn knee ligament because she has Medi-Cal coverage. Join the campaign and take action to fully fund Medi-Cal.",
+    image: "images/lourdes.jpg",
+    email: "After a car accident, the last thing you should have to worry about is whether you will get the surgery you need. But Lourdes Ortiz from Compton found herself in just that situation.<br><br>Lourdes was rushed to the hospital, where they found she tore a ligament in her knee. That was more than six months ago – and Lourdes still hasn't been able to see a specialist to perform the surgery she needs to get her back on her feet. The wait hasn't just meant daily pain for Lourdes – it's meant losing her job too.<br><br>Medi-Cal's low payment rates to healthcare providers mean fewer doctors and hospitals are able to provide treatment to new Medi-Cal patients, and that means delays in care that can cause serious complications.<br><br>Please support fully funding Medi-Cal, and help people like Lourdes get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Los Angeles"
   },
 
   {
-    name: "Jocelyn Lopez",
-    twitter: "Californians like Jocelyn shouldn’t have to wait a month to get a dangerous staph infection treated",
-    facebook: "When Jocelyn Lopez of Desert Hot Springs developed a dangerous and painful staph infection, her doctor told her she’d have to wait more than a month for an appointment because she has Medi-Cal. Instead of waiting, Jocelyn opted for the ER. Californians like Jocelyn shouldn’t have to rely on costly emergency room treatment for basic care. Join the campaign and take action to fund Medi-Cal for California.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Jocelyn-Lopez-web-300x300.jpg",
-    link: "",
+    name: "Ricardo Lara",
+    title: "Senator",
+    emailAddress: "senator.lara@senate.ca.gov",
+    recipient: "Lourdes, age 45, Compton",
+    twitter: "After an accident, you shouldn't need to wait months for surgery b/c you have Medi-Cal @SenRicardoLara ",
+    facebook: "Since her car accident, Lourdes has been unable to get surgery for her torn knee ligament because she has Medi-Cal coverage. Join the campaign and take action to fully fund Medi-Cal.",
+    image: "images/lourdes.jpg",
+    email: "After a car accident, the last thing you should have to worry about is whether you will get the surgery you need. But Lourdes Ortiz from Compton found herself in just that situation.<br><br>Lourdes was rushed to the hospital, where they found she tore a ligament in her knee. That was more than six months ago – and Lourdes still hasn't been able to see a specialist to perform the surgery she needs to get her back on her feet. The wait hasn't just meant daily pain for Lourdes – it's meant losing her job too.<br><br>Medi-Cal's low payment rates to healthcare providers mean fewer doctors and hospitals are able to provide treatment to new Medi-Cal patients, and that means delays in care that can cause serious complications.<br><br>Please support fully funding Medi-Cal, and help people like Lourdes get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Los Angeles"
   },
 
   {
-    name: "Jeeni Criscenzo",
-    twitter: "Seniors like Jeeni shouldn’t have to suffer without necessary surgery just b/c they’re insured by Medi-Cal",
-    facebook: "What if you couldn’t get necessary surgery, because there was no way to see a doctor who could recommend it? Jeeni Criscenzo is facing that problem just because she’s covered by Medi-Cal. Tell legislators to take action NOW to fund Medi-Cal for retirees like Jeeni.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Jeeni-Criscenzo-web-300x285.jpg",
-    link: "",
+    name: "Toni Atkins",
+    title: "Speaker of the Assembly",
+    emailAddress: "assemblymember.atkins@asm.ca.gov",
+    recipient: "Emily Avila, Age 28, Cathedral City, Homecare Hospice RN",
+    twitter: "If you have epilepsy like Emily, you can't afford to wait months for treatment. @ToniAtkins ",
+    facebook: "When Emily had a seizure, she had to wait months to be able to see a neurologist who could adjust her epilepsy medication. Join the campaign and take action to fully fund Medi-Cal for California.",
+    image: "images/emily.jpg",
+    email: "Emily has struggled with epilepsy her whole life, but trying to get the care she needed has been the hardest fight yet.<br><br>When Emily had a seizure that caused a car accident, she was forced to stop working for five months. Emily couldn't keep her private health coverage and enrolled in Medi-Cal.<br><br>When she tried to make an appointment, Emily found out that her regular neurologist couldn't afford to take new Medi-Cal patients. Emily had two more seizures while waiting for a referral to a neurologist who could fix her medication dosage.<br><br>Low Medi-Cal payment rates to doctors mean many specialists can't afford to treat new Medi-Cal patients. That means longer wait times and added health complications for patients like Emily, who need specialist care.<br><br>Please support fully funding Medi-Cal to help people like Emily get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Inland Empire"
   },
 
   {
-    name: "Amanda Rivera",
-    twitter: "Amanda’s multiple sclerosis shouldn’t go untreated just because she’s insured by Medi-Cal.",
-    facebook: "Multiple Sclerosis (MS) isn’t the kind of disease you can afford to leave untreated – but Amanda Rivera can’t get regular care for her MS just because she’s insured by Medi-Cal. Tell legislators to take action NOW to fund Medi-Cal for people with chronic health conditions, like Amanda.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Anita-and-Amanda-Rivera-web-300x300.jpg",
-    link: "",
+    name: "Kevin deLeon",
+    title: "Senate President Pro Tem",
+    email: "senator.deleon@senate.ca.gov",
+    recipient: "Tioy, age 19, City of Ione",
+    twitter: "When Medi-Cal patients like Tioy have to wait for care, it means higher costs %26 worse health. @kdeleon ",
+    facebook: "When does an ingrown toenail turn into emergency surgery? When Medi-Cal patients like Tioy can't get timely care. Join the campaign and take action to fully fund Medi-Cal for California.",
+    image: "images/tioy.jpg",
+    email: "When does a simple ingrown toenail turn into emergency surgery? When Medi-Cal patients are denied timely care.<br><br>Tioy Mulvil from the city of Ione, California is a Medi-Cal patient with autism.<br><br>When Tioy's mother noticed his ingrown toenail, she worked to get him treatment right away – but he had to wait three months for what should have been a routine procedure. While they were waiting for the appointment, the nail became infected and Tioy had to have emergency surgery on his foot.<br><br>When Medi-Cal patients are forced to wait for care, it means more complicated procedures that cost the state more of our limited healthcare dollars – and it means worse health and longer recovery times for patients like Tioy.<br><br>Please support fully funding Medi-Cal, and help Tioy and others like him get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Sacramento"
   },
 
   {
-    name: "Christian",
-    twitter: "5-year-old Christian is autistic, but because he’s covered by Medi-Cal he hasn’t seen a specialist for months",
-    facebook: "Five-year-old Christian is autistic and needs special care, but because he’s covered by Medi-Cal, he hasn’t been able to see a specialist in more than five months. Join us in taking action to fund Medi-Cal.",
-    image: "http://www.seiu-uhw.org/files/2015/08/Graciela-and-Christian-Ocegueda-SQ-300x300.jpg",
-    link: "",
+    name: "Shirley Weber",
+    title: "Assemblymember",
+    emailAddress: "assemblymember.weber@assembly.ca.gov",
+    recipient: "Luz, age 65, San Diego",
+    twitter: ".@DrShirleyWeber: having a stroke, you shouldn't need to worry if Medi-Cal will cover your treatment. ",
+    facebook: "After Luz was rushed to the ER with a stroke and operated on, she learned her surgeon didn't accept Medi-Cal. Join the campaign and take action to fully fund Medi-Cal for California.",
+    image: "images/luz-a.jpg",
+    email: "When Luz Arellano was rushed to a San Diego emergency room with a stroke, that was only the start of her problems.<br><br>While she was in recovery, Luz discovered the neurosurgeon who performed her surgery did not accept Medi-Cal – and Luz's family had to pay for the surgery out of pocket.<br><br>On top of that, she began having complications from the surgery – including vision problems – but she is facing a five-month wait to be seen by a specialist.<br><br>Medi-Cal patients like Luz face real problems finding specialists who accept Medi-Cal and provide care in a timely manner. Low Medi-Cal reimbursement rates means fewer doctors can afford to take new Medi-Cal patients, and that means longer wait times and health complications for people like Luz.<br><br>Please support fully funding Medi-Cal, and help Luz and others like her get the care they need.<br><br>Sincerely,<br><br>",
+    region: "Orange County",
   }
-]
+
+];
 
 var targetNo;
 
@@ -59,35 +84,27 @@ $(document).ready( function() {
 
   targetNo = findMark();
 
-  // Only social actions for now 8/12/15
+  $("#email-target").append(marks[targetNo].title + " " + target + ",");
 
-  $("#social-buttons").toggle();
+  // Filling in the div with email text
+  $("#my-text-edit").html(marks[targetNo].email);
 
+  $("#email-intro").css("display","block");
+  $( "#emailForm" ).css("display","block");
 
-/* THIS BLOCK IS BEING SAVED FOR FUTURE ACTIONS
-*
-*  $("#email-target").append(marks[targetNo].title + " " + target + ",");
-*
-*  // Filling in the div with email text
-*  $("#my-text-edit").html(marks[targetNo].email);
-*
-*  $("#email-intro").css("display","block");
-*  $( "#emailForm" ).css("display","block");
-*
-*  // Adding the Medi-Cal patient to the subject line
-*  var emailSubject = marks[targetNo].recipient.split(",");
-*  emailSubject = emailSubject[0];
-*  $( "#person" ).val(emailSubject);
-*  $( "#legislator" ).val(marks[targetNo].title + " " + target);
-*  $( "#legislatorEmail" ).val(marks[targetNo].emailAddress);
-*/
+  // Adding the Medi-Cal patient to the subject line
+  var emailSubject = marks[targetNo].recipient.split(",");
+  emailSubject = emailSubject[0];
+  $( "#person" ).val(emailSubject);
+  $( "#legislator" ).val(marks[targetNo].title + " " + target);
+  $( "#legislatorEmail" ).val(marks[targetNo].emailAddress);
 
     $("#facebook").click( function() {
           FB.ui({
               method: 'feed',
-              link: marks[targetNo].link,
-              name: marks[targetNo].name,
-              picture: marks[targetNo].image,
+              link: 'http://www.medi-calmatters.org/splash',
+              name: marks[targetNo].recipient,
+              picture: "http://seiuuhw.org/medi-cal-operation/" + marks[targetNo].image,
               description: marks[targetNo].facebook
               }, function(response){});
     });
@@ -113,30 +130,20 @@ $(document).ready( function() {
 
       });
 
-/* THIS BLOCK IS BEING SAVED FOR FUTURE ACTIONS
-*
-*      $("#emailForm").submit( function() {
-*
-*       $("#emailForm").css("display","none");
-*        var editText = document.getElementById("my-text-edit").innerHTML,
-*        emailText = editText.replace(/<br><br>/g,"\r\n\r\n");
-*        document.getElementById("my-text").value = emailText;
-*
-*        $("#email-intro, #emailForm").hide();
-*        $("#social-buttons").toggle();
-*
-*      });
-*/
 
-  // REDIRECT FUNCTION AFTER SOCIAL MEDIA SHARE
+      $("#emailForm").submit( function() {
 
-  $("#facebook").click( function() {
-    ga('send', 'event', 'button', 'click', 'facebook-share');
-  });
+        $("#emailForm").css("display","none");
 
-  $("#twitter").click( function() {
-    ga('send', 'event', 'button', 'click', 'twitter-share');
-  });
+        var editText = document.getElementById("my-text-edit").innerHTML,
+        emailText = editText.replace(/<br><br>/g,"\r\n\r\n");
+        document.getElementById("my-text").value = emailText;
+
+        $("#email-intro, #emailForm").hide();
+        $("#social-buttons").toggle();
+
+
+      });
 
 
   });

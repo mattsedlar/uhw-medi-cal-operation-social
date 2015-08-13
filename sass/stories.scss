@@ -1,0 +1,78 @@
+@import 'reset';
+
+$image-proportion: 400px;
+$base-color: #2E0854;
+$base-font: 1.6em;
+$base-font-height: 1.5em;
+
+html {
+  font-family: "Gotham Black", Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+#app-container {
+ font-size: 62.5%;
+}
+
+header {
+ background-color: #6c3a7a;
+ margin-bottom: 24px;
+}
+
+p {
+  font-size: $base-font;
+  line-height: $base-font-height;
+
+}
+
+.story-image {
+  height: $image-proportion;
+  width: $image-proportion;
+  padding: 12px;
+  position: relative;
+  margin: 0 0 24px 0;
+
+  p {
+
+    background-color: $base-color;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    opacity: 0.90;
+    position: absolute;
+    bottom: 12px;
+    width: $image-proportion - 25;
+
+  }
+}
+
+#story-image-1 {
+  background: url("../images/story-images.jpg") $image-proportion*0 $image-proportion*0;
+}
+
+#story-image-2 {
+  background: url("../images/story-images.jpg") -$image-proportion $image-proportion*0;
+}
+
+#story-image-3 {
+  background: url("../images/story-images.jpg") -$image-proportion*2 $image-proportion*0;
+}
+
+#story-image-4 {
+  background: url("../images/story-images.jpg") $image-proportion*0 (-$image-proportion);
+}
+
+#story-image-5 {
+  background: url("../images/story-images.jpg") -$image-proportion -$image-proportion;
+}
+
+#story-image-6 {
+  background: url("../images/story-images.jpg") -$image-proportion*2 -$image-proportion;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 940px;
+  }
+}

@@ -82,7 +82,7 @@
 
       }
 
-      else { echo "Juan Cervantes"; } ?>";
+      else { echo "Mark Leno"; } ?>";
 
   </script>
    <body>
@@ -117,8 +117,8 @@
 
 
       <section id="social-buttons">
-            <h1 id="share-title">Share the story</h1><br/>
-            <p>Share a Medi-Cal story on social media and spread the word.</p><br/>
+            <h1 id="share-title">Share the story with state legislators</h1><br/>
+            <p>Take the next step by sharing a Medi-Cal story with a key legislator.</p><br/>
         <ul>
           <li id="facebook" class="share"></li>
           <li id="twitter" class="share"></li>
