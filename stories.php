@@ -52,8 +52,8 @@
         </div>
         <div class="social-share group">
 
-            <div class="facebook">Share on Facebook</div>
-            <div class="twitter">Share on Twitter</div>
+            <div class="facebook" data-val="Amanda Rivera">Share on Facebook</div>
+            <div class="twitter" data-val="Amanda Rivera">Share on Twitter</div>
 
         </div>
 
@@ -66,6 +66,13 @@
             <p>When Chanelle Fields’ son Ted was running a 104-degree fever, she couldn’t get a doctor to see him because he is covered by Medi-Cal.</p>
 
           </div>
+
+        <div class="social-share group">
+
+            <div class="facebook" data-val="Chanelle Fields">Share on Facebook</div>
+            <div class="twitter" data-val="Chanelle Fields">Share on Twitter</div>
+
+        </div>
 
       </div>
 
@@ -81,6 +88,13 @@
 
           </div>
 
+        <div class="social-share group">
+
+            <div class="facebook" data-val="Christian">Share on Facebook</div>
+            <div class="twitter" data-val="Christian">Share on Twitter</div>
+
+        </div>
+
       </div>
 
       <div class="col-sm-6">
@@ -90,6 +104,13 @@
             <p>What if you couldn’t get necessary surgery, because there was no way to see a doctor who could recommend it? Jeeni Criscenzo is facing that problem just because she’s covered by Medi-Cal.</p>
 
           </div>
+
+        <div class="social-share group">
+
+            <div class="facebook" data-val="Jeeni Criscenzo">Share on Facebook</div>
+            <div class="twitter" data-val="Jeeni Criscenzo">Share on Twitter</div>
+
+        </div>
 
       </div>
 
@@ -105,6 +126,13 @@
 
           </div>
 
+        <div class="social-share group">
+
+            <div class="facebook" data-val="Jocelyn Lopez">Share on Facebook</div>
+            <div class="twitter" data-val="Jocelyn Lopez">Share on Twitter</div>
+
+        </div>
+
       </div>
 
       <div class="col-sm-6">
@@ -114,6 +142,13 @@
             <p>Juan Cervantes has suffered constant prostate pain since he was 8 years old. It's nearly impossible for him to find a specialist because he's insured by Medi-Cal. Californians like Juan shouldn't suffer with chronic disease because specialists can't afford to treat new Medi-Cal patients.</p>
 
           </div>
+
+        <div class="social-share group">
+
+            <div class="facebook" data-val="Juan Cervantes">Share on Facebook</div>
+            <div class="twitter" data-val="Juan Cervantes">Share on Twitter</div>
+
+        </div>
 
       </div>
 
