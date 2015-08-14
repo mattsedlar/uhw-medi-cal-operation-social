@@ -1,7 +1,8 @@
 @import 'reset';
 
 $image-proportion: 400px;
-$base-color: #2E0854;
+$base-color: #562078;
+$secondary-color: #714e9f;
 $base-font: 1.6em;
 $base-font-height: 1.5em;
 
@@ -16,9 +17,17 @@ html {
 }
 
 header {
- background-color: #6c3a7a;
- margin-bottom: 24px;
+  max-width: 940px;
+  background: #fff;
+  background: radial-gradient(circle, rgba($secondary-color,1), rgba($base-color,1)) repeat scroll 0% 0% transparent;
+  margin-bottom: 24px;
+  img {
+    margin: 12px 0 24px 24px;
+    width: 230px;
+  }
 }
+
+.row { margin-bottom: 24px; }
 
 p {
   font-size: $base-font;
@@ -31,7 +40,7 @@ p {
   width: $image-proportion;
   padding: 12px;
   position: relative;
-  margin: 0 0 24px 0;
+  margin: 0 auto;
 
   p {
 
@@ -64,11 +73,44 @@ p {
 }
 
 #story-image-5 {
-  background: url("../images/story-images.jpg") -$image-proportion -$image-proportion;
+  background: url("../images/story-images.jpg") (-$image-proportion) (-$image-proportion);
 }
 
 #story-image-6 {
-  background: url("../images/story-images.jpg") -$image-proportion*2 -$image-proportion;
+  background: url("../images/story-images.jpg") (-$image-proportion*2) (-$image-proportion);
+}
+
+.social-share {
+  width: 400px;
+  margin:0 auto;
+}
+
+.facebook, .twitter {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: $base-font*5/6;
+  font-weight: bold;
+  color:#fff;
+  padding:17px;
+}
+
+.facebook {
+ background-color: darken($base-color,10);
+ float:left;
+}
+
+.twitter {
+ background-color: lighten($base-color,10);
+  float:right;
+}
+
+/* CLEARFIX */
+
+.group:after {
+     content: "";
+     display: table;
+     clear: both;
 }
 
 @media (min-width: 1200px) {

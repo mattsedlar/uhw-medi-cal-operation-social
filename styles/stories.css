@@ -53,7 +53,15 @@ html {
   font-size: 62.5%; }
 
 header {
-  background-color: #6c3a7a;
+  max-width: 940px;
+  background: #fff;
+  background: radial-gradient(circle, #714e9f, #562078) repeat scroll 0% 0% transparent;
+  margin-bottom: 24px; }
+  header img {
+    margin: 12px 0 24px 24px;
+    width: 230px; }
+
+.row {
   margin-bottom: 24px; }
 
 p {
@@ -65,9 +73,9 @@ p {
   width: 400px;
   padding: 12px;
   position: relative;
-  margin: 0 0 24px 0; }
+  margin: 0 auto; }
   .story-image p {
-    background-color: #2E0854;
+    background-color: #562078;
     color: white;
     font-weight: bold;
     padding: 12px;
@@ -89,10 +97,37 @@ p {
   background: url("../images/story-images.jpg") 0px -400px; }
 
 #story-image-5 {
-  background: url("../images/story-images.jpg")-400px-400px; }
+  background: url("../images/story-images.jpg") -400px -400px; }
 
 #story-image-6 {
-  background: url("../images/story-images.jpg")-800px-400px; }
+  background: url("../images/story-images.jpg") -800px -400px; }
+
+.social-share {
+  width: 400px;
+  margin: 0 auto; }
+
+.facebook, .twitter {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.33333em;
+  font-weight: bold;
+  color: #fff;
+  padding: 17px; }
+
+.facebook {
+  background-color: #391550;
+  float: left; }
+
+.twitter {
+  background-color: #732ba0;
+  float: right; }
+
+/* CLEARFIX */
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 @media (min-width: 1200px) {
   .container {

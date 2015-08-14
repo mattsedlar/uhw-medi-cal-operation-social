@@ -38,8 +38,8 @@
     <main class="container" id="app-container">
 
     <header>
-	    <img src="http://www.seiu-uhw.org/files/2011/09/locals2011_01.jpg" width="564" height="106" alt="United Healthcare Workers West - ">
-	  </header>
+      <img src="http://go.seiu-uhw.org/l/45502/2014-12-02/2byct/45502/28054/SEIU_UHW_Logo_4C_noBG.png" alt="SEIU-UHW"/>
+    </header>
 
     <div class="row row1">
 
@@ -48,6 +48,12 @@
         <div class="story-image" id="story-image-1">
 
           <p>Multiple Sclerosis (MS) isn’t the kind of disease you can afford to leave untreated – but Amanda Rivera can’t get regular care for her MS just because she’s insured by Medi-Cal.</p>
+
+        </div>
+        <div class="social-share group">
+
+            <div class="facebook">Share on Facebook</div>
+            <div class="twitter">Share on Twitter</div>
 
         </div>
 
@@ -91,9 +97,25 @@
 
     <div class="row row3">
 
-      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
 
-      <div class="col-sm-6"></div>
+          <div class="story-image" id="story-image-5">
+
+            <p>When Jocelyn Lopez of Desert Hot Springs developed a dangerous and painful staph infection, her doctor told her she’d have to wait more than a month for an appointment because she has Medi-Cal.</p>
+
+          </div>
+
+      </div>
+
+      <div class="col-sm-6">
+
+          <div class="story-image" id="story-image-6">
+
+            <p>Juan Cervantes has suffered constant prostate pain since he was 8 years old. It's nearly impossible for him to find a specialist because he's insured by Medi-Cal. Californians like Juan shouldn't suffer with chronic disease because specialists can't afford to treat new Medi-Cal patients.</p>
+
+          </div>
+
+      </div>
 
     </div> <!-- row three -->
 
