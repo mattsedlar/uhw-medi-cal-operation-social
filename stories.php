@@ -28,6 +28,49 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "http://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+      t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+
+twttr.ready(function (twttr) {
+twttr.events.bind('tweet', function (event) {
+  console.log(event);
+  ga('send', 'event', 'button', 'click', 'twitter-share');
+  shareRedirect(cope);
+  });
+});
+
+</script>
+
+
+    <script>
+
+      var cope = "<?php
+
+      if(isset($_GET['cope'])) {
+
+        echo $_GET['cope'];
+
+      }
+
+      else { echo "na"; } ?>";
+
+    </script>
+
   </head>
 
    <body>
@@ -53,7 +96,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Amanda Rivera">Share on Facebook</div>
-            <div class="twitter" data-val="Amanda Rivera">Share on Twitter</div>
+            <div class="twitter" data-val="Amanda Rivera"><a href="">Share on Twitter</a></div>
 
         </div>
 
@@ -70,7 +113,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Chanelle Fields">Share on Facebook</div>
-            <div class="twitter" data-val="Chanelle Fields">Share on Twitter</div>
+            <div class="twitter" data-val="Chanelle Fields"><a href="">Share on Twitter</a></div>
 
         </div>
 
@@ -91,7 +134,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Christian">Share on Facebook</div>
-            <div class="twitter" data-val="Christian">Share on Twitter</div>
+            <div class="twitter" data-val="Christian"><a href="">Share on Twitter</a></div>
 
         </div>
 
@@ -108,7 +151,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Jeeni Criscenzo">Share on Facebook</div>
-            <div class="twitter" data-val="Jeeni Criscenzo">Share on Twitter</div>
+            <div class="twitter" data-val="Jeeni Criscenzo"><a href="">Share on Twitter</a></div>
 
         </div>
 
@@ -129,7 +172,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Jocelyn Lopez">Share on Facebook</div>
-            <div class="twitter" data-val="Jocelyn Lopez">Share on Twitter</div>
+            <div class="twitter" data-val="Jocelyn Lopez"><a href="">Share on Twitter</a></div>
 
         </div>
 
@@ -146,7 +189,7 @@
         <div class="social-share group">
 
             <div class="facebook" data-val="Juan Cervantes">Share on Facebook</div>
-            <div class="twitter" data-val="Juan Cervantes">Share on Twitter</div>
+            <div class="twitter" data-val="Juan Cervantes"><a href="">Share on Twitter</a></div>
 
         </div>
 

@@ -43,7 +43,10 @@ var marks = [
   }
 ]
 
-var targetNo;
+var targetNo,
+    contributors = "https://uhw.seiu.org/page/contribute/giveonetimeformedical",
+    noncontributors = "https://uhw.seiu.org/page/contribute/buildCOPEforMediCal",
+    na = "http://www.seiu-uhw.org/?p=21703";
 
 $(document).ready( function() {
 
@@ -64,6 +67,18 @@ $(document).ready( function() {
     });
 
 
+    // REDIRECT FUNCTION AFTER SOCIAL MEDIA SHARE
+
+  shareRedirect = function(v) {
+
+    if(v == "yes") { window.location.href = contributors; }
+
+    else if(v == "no") { window.location.href = noncontributors; }
+
+    else { window.location.href = na; }
+
+  }
+
 
     $(".facebook").click( function() {
 
@@ -77,10 +92,19 @@ $(document).ready( function() {
               name: marks[targetNo].name,
               picture: marks[targetNo].image,
               description: marks[targetNo].facebook
-              }, function(response){});
+              }, function(response){
+
+                if (response && !response.error_code) {
+                   ga('send', 'event', 'button', 'click', 'facebook-share');
+                   shareRedirect(cope);
+                }
+                else { }
+
+              });
+
     });
 
-    $(".twitter").click( function() {
+    $(".twitter").hover( function() {
 
           target = $(this).data("val");
 
@@ -91,31 +115,11 @@ $(document).ready( function() {
             //add shortened url for images
             hashtags = "&hashtags=MediCalMatters"
 
-        var width  = 575,
-        height = 400,
-        left   = ($(window).width()  - width)  / 2,
-        top    = ($(window).height() - height) / 2,
-        url    = twitterUrl + text + hashtags,
-        opts   = 'status=1' +
-                 ',width='  + width  +
-                 ',height=' + height +
-                 ',top='    + top    +
-                 ',left='   + left;
 
-        window.open(url, 'twitter', opts);
+            $(this).find("a").prop("href",twitterUrl+text+hashtags);
+
 
       });
 
 
-  // REDIRECT FUNCTION AFTER SOCIAL MEDIA SHARE
-
-  $(".facebook").click( function() {
-    ga('send', 'event', 'button', 'click', 'facebook-share');
-  });
-
-  $(".twitter").click( function() {
-    ga('send', 'event', 'button', 'click', 'twitter-share');
-  });
-
-
-  });
+});

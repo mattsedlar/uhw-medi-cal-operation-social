@@ -39,6 +39,11 @@ p {
 
 }
 
+a, a:hover, a:visited, a:focus {
+ text-decoration: none;
+ color: #fff;
+}
+
 .story-image {
   height: $image-proportion;
   width: $image-proportion;
