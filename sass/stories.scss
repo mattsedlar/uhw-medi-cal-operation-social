@@ -18,8 +18,8 @@ body {
 #app-container {
  font-size: 62.5%;
  background-color: #fff;
- padding-right: 0px;
- padding-left: 0px;
+ padding-right: 24px;
+ padding-left: 24px;
 }
 
 header {
@@ -33,16 +33,24 @@ header {
   }
 }
 
+h1 { 
+  font-size: $base-font*2;
+  line-height: $base-font-height - 0.5;
+  padding-bottom: 12px;
+ }
+
 p {
   font-size: $base-font;
   line-height: $base-font-height;
-
+  padding-bottom: 18px;
 }
 
 a, a:hover, a:visited, a:focus {
  text-decoration: none;
  color: #fff;
 }
+
+strong, b { font-weight:bold; }
 
 .story-image {
   height: $image-proportion;
@@ -103,7 +111,7 @@ a, a:hover, a:visited, a:focus {
   color:#fff;
   padding:17px;
   cursor: pointer;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .facebook {

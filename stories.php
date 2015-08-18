@@ -84,6 +84,10 @@ twttr.events.bind('tweet', function (event) {
       <img src="http://go.seiu-uhw.org/l/45502/2014-12-02/2byct/45502/28054/SEIU_UHW_Logo_4C_noBG.png" alt="SEIU-UHW"/>
     </header>
 
+	<h1>Stories have the power to move us to action.</h1>
+
+	<p>Right now, our legislators need to know that their constituents &mdash; <b>and that means our families and our communities</b> &mdash; are talking about Medi-Cal and the millions of real women, children, seniors and people with disabilities who can't get access to the care they need. Share one of the stories below with your community and keep the conversation going.</p>
+
     <div class="row row1">
 
       <div class="col-sm-6">

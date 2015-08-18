@@ -55,8 +55,8 @@ body {
 #app-container {
   font-size: 62.5%;
   background-color: #fff;
-  padding-right: 0px;
-  padding-left: 0px; }
+  padding-right: 24px;
+  padding-left: 24px; }
 
 header {
   max-width: 940px;
@@ -67,13 +67,22 @@ header {
     margin: 12px 0 24px 24px;
     width: 230px; }
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1em;
+  padding-bottom: 12px; }
+
 p {
   font-size: 1.6em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  padding-bottom: 18px; }
 
 a, a:hover, a:visited, a:focus {
   text-decoration: none;
   color: #fff; }
+
+strong, b {
+  font-weight: bold; }
 
 .story-image {
   height: 350px;
@@ -122,7 +131,7 @@ a, a:hover, a:visited, a:focus {
   color: #fff;
   padding: 17px;
   cursor: pointer;
-  margin-bottom: 24px; }
+  margin-bottom: 18px; }
 
 .facebook {
   background-color: #391550;
